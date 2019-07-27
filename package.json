@@ -1,0 +1,40 @@
+{
+  "name": "gatsby-source-git-remotes",
+  "version": "0.0.1",
+  "author": "Garrett Weems <gwgraphicdesign@gmail.com> (https://glweems.com)",
+  "description": "Gatsby plugin for pulling files into Gatsby from multiple Git repositories",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stevetweeddale/gatsby-source-git-remotes.git"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-source-plugin",
+    "git"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "gatsby": ">2.0.0-alpha"
+  },
+  "bugs": {
+    "url": "https://github.com/glweems/gatsby-source-git-remotes/issues"
+  },
+  "homepage": "https://github.com/glweems/gatsby-source-git-remotes#readme",
+  "dependencies": {
+    "fast-glob": "^2.2.3",
+    "fs-extra": "^5.0.0",
+    "gatsby-source-filesystem": "^2.0.4",
+    "git-url-parse": "^11.1.1",
+    "rimraf": "^2.6.2",
+    "simple-git": "^1.105.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
