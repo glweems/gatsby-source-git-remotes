@@ -1,6 +1,6 @@
 {
   "name": "gatsby-source-git-remotes",
-  "version": "0.0.1",
+  "version": "1.1.0",
   "author": "Garrett Weems <gwgraphicdesign@gmail.com> (https://glweems.com)",
   "description": "Gatsby plugin for pulling files into Gatsby from multiple Git repositories",
   "scripts": {
