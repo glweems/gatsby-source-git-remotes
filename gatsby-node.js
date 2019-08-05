@@ -17,14 +17,14 @@ exports.sourceNodes = async (
   {
     actions: { createNode }, store, createNodeId, createContentDigest, reporter,
   },
-  { repos, userDir = './' },
+  { repos },
 ) => {
   async function isAlreadyCloned(remote, path) {
     const existingRemote = await Git(path).listRemote(['--get-url']);
     return existingRemote.trim() === remote.trim();
   }
 
-  async function getTargetBranch(repo, branch) {
+  async function getTargetBranch(repo, branch = 'master') {
     if (typeof branch === 'string') {
       return `origin/${branch}`;
     }
@@ -57,7 +57,7 @@ exports.sourceNodes = async (
     name, remote, branch, patterns,
   }) => {
     const programDir = store.getState().program.directory;
-    const localPath = Path.join(programDir, userDir, 'gatsby-source-git-remotes', name);
+    const localPath = Path.join(programDir, '.cache', 'gatsby-source-git-remotes', name);
     const parsedRemote = GitUrlParse(remote);
 
     let repo;
@@ -104,11 +104,12 @@ exports.sourceNodes = async (
 
     return repoFiles.map(createAndProcessNode);
   };
+  const activity = reporter.activityTimer(`${repos.length} git repositories`);
+  activity.start();
 
-  return Promise.all(
-    repos.map((repository) => {
-      reporter.log(`Cloning ${repository.name}`);
-      return cloneRepo(repository);
-    }),
+  await Promise.all(
+    repos.map(repository => cloneRepo(repository)),
   );
+
+  activity.end();
 };

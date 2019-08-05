@@ -45,9 +45,6 @@ module.exports = {
    {
       resolve: `gatsby-source-git`,
       options: {
-        // OPTIONAL
-        // Location where repositories should be downloaded to 
-        userDir: 'public',
         repos: [
           {
             name: `react-peekaboo-navbar`,

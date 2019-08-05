@@ -1,6 +1,6 @@
 {
   "name": "gatsby-source-git-remotes",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Garrett Weems <gwgraphicdesign@gmail.com> (https://glweems.com)",
   "description": "Gatsby plugin for pulling files into Gatsby from multiple Git repositories",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/stevetweeddale/gatsby-source-git-remotes.git"
+    "url": "https://github.com/glweems/gatsby-source-git-remotes.git"
   },
   "keywords": [
     "gatsby",
@@ -27,6 +27,7 @@
   "dependencies": {
     "fast-glob": "^2.2.3",
     "fs-extra": "^5.0.0",
+    "gatsby-node-helpers": "^0.3.0",
     "gatsby-source-filesystem": "^2.0.4",
     "git-url-parse": "^11.1.1",
     "rimraf": "^2.6.2",
