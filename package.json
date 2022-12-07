@@ -31,7 +31,7 @@
     "gatsby-source-filesystem": "^2.0.4",
     "git-url-parse": "^11.1.1",
     "rimraf": "^2.6.2",
-    "simple-git": "^1.105.0"
+    "simple-git": "^3.15.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
